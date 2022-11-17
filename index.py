@@ -18,12 +18,12 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
 today = date.today()
 
-# upload and encode images (currently local files)
-ambetter_logo = '/Users/joegriffin/Downloads/ambetter-health-insurance-logo-vector-removebg-preview.png'
-encoded_ambetter_logo = base64.b64encode(open(ambetter_logo, 'rb').read())
+# # upload and encode images (currently local files)
+# ambetter_logo = '/Users/joegriffin/Downloads/ambetter-health-insurance-logo-vector-removebg-preview.png'
+# encoded_ambetter_logo = base64.b64encode(open(ambetter_logo, 'rb').read())
 
-ambetter_name = '/Users/joegriffin/Downloads/Ambetter-Logo.png'
-encoded_ambetter_name = base64.b64encode(open(ambetter_name, 'rb').read())
+# ambetter_name = '/Users/joegriffin/Downloads/Ambetter-Logo.png'
+# encoded_ambetter_name = base64.b64encode(open(ambetter_name, 'rb').read())
 
 # styling the sidebar
 SIDEBAR_STYLE = {
@@ -47,7 +47,7 @@ CONTENT_STYLE = {
 # labels and links for sidebar
 sidebar = html.Div(
    [
-       html.Img(src='data:image/png;base64,{}'.format(encoded_ambetter_name.decode()), height=100, style={'textAlign': 'center'}),
+#        html.Img(src='data:image/png;base64,{}'.format(encoded_ambetter_name.decode()), height=100, style={'textAlign': 'center'}),
        html.Hr(),
        dbc.Nav(
            [
@@ -89,7 +89,7 @@ index_layout = html.Div(
             html.Header(
                 children=[
                     html.Br(),
-                    html.Img(src='data:image/png;base64,{}'.format(encoded_ambetter_logo.decode()), height=100, style={'textAlign': 'center'}),
+#                     html.Img(src='data:image/png;base64,{}'.format(encoded_ambetter_logo.decode()), height=100, style={'textAlign': 'center'}),
                     html.Div(children="Member Insights Dashboard", style={"fontSize": "42px"}),
                     html.Br(),
                 ],
