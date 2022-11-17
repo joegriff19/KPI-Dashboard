@@ -1,5 +1,5 @@
 # Import Packages and other files for app
-from app import app
+from app import app, server
 from pages import page_1
 from pages import page_2
 from pages import page_3
