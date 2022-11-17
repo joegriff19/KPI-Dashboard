@@ -2,3 +2,4 @@ dash==2.6.1
 pandas
 gunicorn
 dash-bootstrap-components
+matplotlib
