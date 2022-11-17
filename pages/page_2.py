@@ -17,32 +17,6 @@ from datetime import date, timedelta
 from random import choices
 import random
 
-# # CURRENT DATE CUTOFF IS SET AT FEB 15 AKA 135 DAYS
-# days_df = pd.read_sql_query("SELECT RUN_DATE, STATE, PASSIVE_DAYS FROM IFP_SEGMENT_LAB_OWN_TABLES.PASSTOACT_2022 WHERE PASSIVE_DAYS < 135 and STATE <> 'NY'", conn)
-#
-# # CLOSE EDWP CONNECTION
-# conn.close()
-#
-# # rename columns
-# days_df.columns = ['Date', 'State', 'Days']
-#
-# # get averages for each state
-# ave_days_df = days_df.groupby('State').mean()
-# ave_days_df = ave_days_df.round(decimals=2)
-# ave_days_df = ave_days_df.reset_index()
-#
-# # get data for all states time plot
-# date_counts = days_df['Date'].value_counts()
-# all_counts_df = pd.DataFrame(date_counts)
-# all_counts_df = all_counts_df.reset_index()
-# all_counts_df.columns = ['Date', 'Members']  # change column names
-# all_counts_df = all_counts_df.sort_values(by=['Date'])
-#
-# # get data for each individual state time plot
-# dates_df = days_df.groupby(['State', 'Date']).size().unstack(fill_value=0).reset_index()
-# dates_df = dates_df.iloc[:, 1:]
-#
-
 rand_list = []
 n = 100
 for i in range(n):
