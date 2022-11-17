@@ -15,9 +15,6 @@ og_member_year_df = pd.DataFrame(np.random.randint(2014, 2023, size=(100, 2)), c
 og_member_year_df.columns = ['year', 'members']
 og_member_year_df = og_member_year_df.groupby('year').count().reset_index()
 
-# Configure / edit df
-# og_member_year_df = og_member_year_df.sort_values(by='original_member_year', ascending=True)
-
 # Page 1 Layout and Callback
 rowEvenColor = 'lightgrey'
 rowOddColor = 'white'
