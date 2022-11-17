@@ -93,6 +93,7 @@ index_layout = html.Div(
                     'background': colors['background']
                 }
             ),
+            html.Div(children='NOTE: ALL DATA HERE IS COMPLETELY RANDOMIZED', style={'textAlign': 'center'}),
             html.Div(children='Hello! This is the Member Insights Dashboard.', style={'textAlign': 'center'}),
             html.Br(),
             html.Div(children='This dashboard was built to better visualize performance of Member Insights segmentation'
@@ -105,7 +106,6 @@ index_layout = html.Div(
             html.Br(),
             html.Div(children='Defining terms and calculations: ______', style={'textAlign': 'center'}),
             html.Br(),
-            html.Div(children='Note: ', style={'font-weight': 'bold', 'textAlign': 'center'}),
             html.Div(children=f'This dashboard was last updated {today} CST.', style={'textAlign': 'center'}),
     ]
 )
