@@ -1,5 +1,5 @@
 # Import Packages and other files for app
-from app import app, server
+from app import app, server #NEED THE IMPORT SERVER FOR RENDER
 from pages import page_1
 from pages import page_2
 from pages import page_3
@@ -17,13 +17,6 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
 today = date.today()
-
-# # upload and encode images (currently local files)
-# ambetter_logo = '/Users/joegriffin/Downloads/ambetter-health-insurance-logo-vector-removebg-preview.png'
-# encoded_ambetter_logo = base64.b64encode(open(ambetter_logo, 'rb').read())
-
-# ambetter_name = '/Users/joegriffin/Downloads/Ambetter-Logo.png'
-# encoded_ambetter_name = base64.b64encode(open(ambetter_name, 'rb').read())
 
 # styling the sidebar
 SIDEBAR_STYLE = {
@@ -44,10 +37,17 @@ CONTENT_STYLE = {
    "padding": "2rem 1rem",
 }
 
+# Index Page Layout
+colors = {
+    'background': '#ffffff',
+    'text': '#cb177d'  # pink color
+}
+
 # labels and links for sidebar
 sidebar = html.Div(
    [
-#        html.Img(src='data:image/png;base64,{}'.format(encoded_ambetter_name.decode()), height=100, style={'textAlign': 'center'}),
+       html.Div(children="griffin", style={"fontSize": "82px", 'textAlign': 'center',
+                                           'color': colors['text'], 'background': colors['background']}),
        html.Hr(),
        dbc.Nav(
            [
@@ -77,19 +77,13 @@ app.layout = html.Div([
    content
 ])
 
-# Index Page Layout
-colors = {
-    'background': '#ffffff',
-    'text': '#cb177d'  # Ambetter pink color
-}
-
 # index page layout
 index_layout = html.Div(
     children=[
             html.Header(
                 children=[
                     html.Br(),
-#                     html.Img(src='data:image/png;base64,{}'.format(encoded_ambetter_logo.decode()), height=100, style={'textAlign': 'center'}),
+                    html.Div(children="💻", style={"fontSize": "100px"}),
                     html.Div(children="Member Insights Dashboard", style={"fontSize": "42px"}),
                     html.Br(),
                 ],
@@ -99,7 +93,7 @@ index_layout = html.Div(
                     'background': colors['background']
                 }
             ),
-            html.Div(children='Hello! This is the Ambetter Member Insights Dashboard.', style={'textAlign': 'center'}),
+            html.Div(children='Hello! This is the Member Insights Dashboard.', style={'textAlign': 'center'}),
             html.Br(),
             html.Div(children='This dashboard was built to better visualize performance of Member Insights segmentation'
                               ' This will allow us to drive strategic member'
