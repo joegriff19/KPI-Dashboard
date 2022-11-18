@@ -59,7 +59,7 @@ for j in range(27):
         c = 1
     timeplots.add_trace(go.Scatter(x=dftest.date, y=dftest.member_count, line=dict(color="#cb177d")), row=r, col=c)
 
-timeplots.update_layout(title_text="Passive to Active Timeline by State", showlegend=False, hoverlabel=dict(namelength=0))
+timeplots.update_layout(title_text="A to B Timeline by State", showlegend=False, hoverlabel=dict(namelength=0))
 
 rowEvenColor = 'lightgrey'
 rowOddColor = 'white'
@@ -115,7 +115,7 @@ def update_graph(value):
                 )
         ],
                 'layout': go.Layout(
-                    title='Average Number of Days from Passive to Active by State'
+                    title='Average Number of Days from A to B by State'
                 )
         }
     if value == 'timeplots':
