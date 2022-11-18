@@ -28,8 +28,8 @@ layout = html.Div(
         html.Div([
             dcc.Dropdown(
                 id='dropdown4',
-                options=[{'label': 'bar', 'value': 'bar'},
-                         {'label': 'table', 'value': 'table'}],
+                options=[{'label': 'Bar', 'value': 'Bar'},
+                         {'label': 'Table', 'value': 'Table'}],
                 value='bar',
             ),
         ],
@@ -59,7 +59,7 @@ layout = html.Div(
     [Input('dropdown4', 'value')]
 )
 def update_the_graph(value):
-    if value == 'bar':
+    if value == 'Bar':
         x1 = new_renew_22_df.category
         y1 = col_list
         col = '#cb177d'
@@ -69,7 +69,7 @@ def update_the_graph(value):
             marker_color=col),
         ],
             'layout': go.Layout(
-                title='Renewed vs New Members OE 2022',
+                title='A vs B Members 2022',
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 xaxis_tickangle=-17,
@@ -95,7 +95,7 @@ def update_the_graph(value):
 
             )
         }
-    if value == 'table':
+    if value == 'Table':
         return {'data': [go.Table(
             header=dict(values = list (new_renew_22_df.columns),
                         font=dict(color='#ffffff'),
