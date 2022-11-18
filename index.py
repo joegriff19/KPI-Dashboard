@@ -54,11 +54,11 @@ sidebar = html.Div(
                # this determines order of pages in sidebar
                dbc.NavLink("🏠 Home ", href="/", active="exact"),
                dbc.NavLink("ℹ️ Member Overview", href="/page-1", active="exact"),
-               dbc.NavLink("📈 Passive to Active Analysis", href="/page-2", active="exact"),
-               dbc.NavLink("📊 Renewed vs. New Members", href="/page-4", active="exact"),
+               dbc.NavLink("📈 A to B Analysis", href="/page-2", active="exact"),
+               dbc.NavLink("📊 X vs. Y Members", href="/page-4", active="exact"),
                dbc.NavLink("📝 Separation Reasons", href="/page-5", active="exact"),
                dbc.NavLink("🗓️ Original Member Year", href="/page-6", active="exact"),
-               dbc.NavLink("👥 Metal Level Distribution", href="/page-7", active="exact")
+               dbc.NavLink("👥 Group Distribution", href="/page-7", active="exact")
            ],
            vertical=True,
            pills=True,
