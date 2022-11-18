@@ -11,9 +11,9 @@ from app import app
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-metal_levels_22_df = pd.DataFrame(np.random.randint(0, 3, size=(100, 2)), columns=list('AB'))
-metal_levels_22_df.columns = ['Metal_Level', 'Members']
-metal_levels_22_df = metal_levels_22_df.groupby('Metal_Level').count().reset_index()
+group_22_df = pd.DataFrame(np.random.randint(0, 3, size=(100, 2)), columns=list('AB'))
+group_22_df.columns = ['Group', 'Members']
+group_22_df = group_22_df.groupby('Group').count().reset_index()
 
 # Page 3 Layout and Callbacks
 colors = {
@@ -27,7 +27,7 @@ layout = html.Div(
                 dcc.Dropdown(
                     id='dropdown3',
                     multi=True,
-                    options=[{'label': x, 'value': x} for x in metal_levels_22_df.Metal_Level],
+                    options=[{'label': x, 'value': x} for x in group_22_df.Group],
                     value=[0, 1, 2, 3]
                     ),
                 dcc.Graph(
@@ -48,7 +48,7 @@ layout = html.Div(
 def update_my_graph(val_chosen):
     if len(val_chosen) > 0:
         print(f"value user chose: {val_chosen}")
-        dff = metal_levels_22_df[metal_levels_22_df["Metal_Level"].isin(val_chosen)]
-        fig = px.pie(dff, values="Members", names="Metal_Level", title="Metal Level Distribution 2022")
+        dff = group_22_df[metal_levels_22_df["Group"].isin(val_chosen)]
+        fig = px.pie(dff, values="Members", names="Group", title="Group Distribution 2022")
         fig.update_traces(textinfo="percent").update_layout(title_x=0.5)
         return fig
