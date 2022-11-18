@@ -93,13 +93,13 @@ index_layout = html.Div(
                     'background': colors['background']
                 }
             ),
-            html.Div(children='NOTE: ALL DATA HERE IS COMPLETELY RANDOMIZED', style={'textAlign': 'center'}),
+            html.Div(children='NOTE: ALL DATA HERE IS COMPLETELY RANDOMIZED EACH TIME UPON LOADING OF THIS DASHBOARD', style={'textAlign': 'center'}),
+            html.Br(),
+            html.Div(children='Please feel free to contact me with any comments or questions via email: joegriff19@gmail.com', style={'textAlign': 'center'}),
+            html.Br(),
+            html.Br(),
             html.Br(),
             html.Div(children='Hello! This is the Member Insights Dashboard.', style={'textAlign': 'center'}),
-            html.Br(),
-            html.Div(children='This dashboard was built to better visualize performance of Member Insights segmentation'
-                              ' This will allow us to drive strategic member'
-                              ' engagement for OE23 Retention.', style={'textAlign': 'center'}),
             html.Br(),
             html.Div(children='The content of this dashboard comes mainly from the following tables: ______', style={'textAlign': 'center'}),
             html.Br(),
