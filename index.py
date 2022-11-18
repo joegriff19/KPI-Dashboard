@@ -84,7 +84,7 @@ index_layout = html.Div(
                 children=[
                     html.Br(),
                     html.Div(children="💻", style={"fontSize": "100px"}),
-                    html.Div(children="Member Insights Dashboard", style={"fontSize": "42px"}),
+                    html.Div(children="KPI Dashboard", style={"fontSize": "42px"}),
                     html.Br(),
                 ],
                 style={
@@ -96,7 +96,6 @@ index_layout = html.Div(
             html.Div(children='NOTE: ALL DATA HERE IS COMPLETELY RANDOMIZED EACH TIME UPON LOADING OF THIS DASHBOARD', style={'textAlign': 'center'}),
             html.Br(),
             html.Div(children='Please feel free to contact me with any comments or questions via email: joegriff19@gmail.com', style={'textAlign': 'center'}),
-            html.Br(),
             html.Br(),
             html.Br(),
             html.Div(children='Hello! This is the Member Insights Dashboard.', style={'textAlign': 'center'}),
