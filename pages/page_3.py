@@ -53,7 +53,7 @@ ave_table = go.Figure(data=[go.Table(
                             line_color='#000000')),
             )],
 )
-ave_table.update_layout(width=600, height=800, title_text="Average Number of Days from Passive to Active by State")
+ave_table.update_layout(width=600, height=800, title_text="Average Number of Days from A to B by State")
 
 layout = html.Div(
     dcc.Graph(figure=ave_table),
