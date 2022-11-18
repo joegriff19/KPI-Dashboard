@@ -94,6 +94,7 @@ index_layout = html.Div(
                 }
             ),
             html.Div(children='NOTE: ALL DATA HERE IS COMPLETELY RANDOMIZED', style={'textAlign': 'center'}),
+            html.Br(),
             html.Div(children='Hello! This is the Member Insights Dashboard.', style={'textAlign': 'center'}),
             html.Br(),
             html.Div(children='This dashboard was built to better visualize performance of Member Insights segmentation'
