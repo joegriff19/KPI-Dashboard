@@ -16,26 +16,23 @@ pd.options.mode.chained_assignment = None
 means_df = pd.DataFrame(np.random.randint(0, 100, size=(25, 10)), columns=list('ABCDEFGHIJ'))
 
 # rename columns and group by state
-means_df.columns = ['State', 'Age', 'Metal_Level', 'CSR', 'APTC',
-                         'Med_Claims', 'Med_Spend', 'RX_Claims', 'MHP', 'Autopay']
+means_df.columns = ['State', 'Age', 'Group', 'A', 'B',
+                         'X', 'Spending', 'Claims', 'C', 'D']
 means_df = means_df.groupby('State').mean().reset_index()
 
 means_df['Age'] = means_df['Age'].map('{:.0f}'.format)
-means_df['Med_Claims'] = means_df['Med_Claims'].map('{:.0f}'.format)
-means_df['Med_Spend'] = means_df['Med_Spend'].map('${:,.0f}'.format)
-means_df['RX_Claims'] = means_df['RX_Claims'].map('{:.0f}'.format)
-means_df['CSR'] = means_df['CSR'].map('{:.0f}%'.format)
-means_df['APTC'] = means_df['APTC'].map('{:.0f}%'.format)
-means_df['Autopay'] = means_df['Autopay'].map('{:.0f}%'.format)
-means_df['MHP'] = means_df['MHP'].map('{:.0f}%'.format)
-# means_df['Num_Members'] = means_df['Num_Members'].map('{:,.0f}'.format)
+means_df['X'] = means_df['X'].map('{:.0f}'.format)
+means_df['Spending'] = means_df['Spending'].map('${:,.0f}'.format)
+means_df['Claims'] = means_df['Claims'].map('{:.0f}'.format)
+means_df['A'] = means_df['A'].map('{:.0f}%'.format)
+means_df['B'] = means_df['B'].map('{:.0f}%'.format)
+means_df['C'] = means_df['C'].map('{:.0f}%'.format)
+means_df['D'] = means_df['D'].map('{:.0f}%'.format)
 
 # create df purely for column names (no data in df)
-cols_df = pd.DataFrame(columns=['State', 'Mean Age', 'Mean Number of Medical Claims', 'Mean Medical Spending',
-                                'Mean Number of RX Claims',
-                                'Members with CSR', 'Members with APTC', 'Members with MHP', 'Members with Autopay',
-                                # 'Bronze Members', 'Silver Members', 'Gold Members',
-                                # 'Total Number of Members'
+cols_df = pd.DataFrame(columns=['State', 'Mean Age', 'Mean Number of X', 'Spending',
+                                'Mean Number of Y',
+                                'Members with A', 'Members with B', 'Members with C', 'Members with D',
                                 ])
 rowEvenColor = 'lightgrey'
 rowOddColor = 'white'
@@ -50,12 +47,9 @@ summ_table = go.Figure(data=[go.Table(
                             align=['center'],
                             ),
                 # bring in all the other data columns
-                cells=(dict(values=[means_df.State, means_df.Age, means_df.Med_Claims, means_df.Med_Spend,
-                                    means_df.RX_Claims,
-                                    means_df.CSR, means_df.APTC, means_df.MHP, means_df.Autopay
-                                    # csr_df.Yes_Pct, aptc_df.Yes_Pct, mhp_df.Yes_Pct,
-                                    # autopay_df.Yes_Pct, metal_df.Bronze_Pct, metal_df.Silver_Pct, metal_df.Gold_Pct,
-                                    # autopay_df.Num_Members
+                cells=(dict(values=[means_df.State, means_df.Age, means_df.Claims, means_df.Spending,
+                                    means_df.X,
+                                    means_df.A, means_df.B, means_df.C, means_df.D
                                     ],
                             fill_color=[[rowOddColor, rowEvenColor] * 15],
                             line_color='#000000',
