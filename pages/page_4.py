@@ -69,7 +69,7 @@ def update_the_graph(value):
             marker_color=col),
         ],
             'layout': go.Layout(
-                title='A vs B Members 2022',
+                title='X vs. Y Members 2022',
                 plot_bgcolor='white',
                 paper_bgcolor='white',
                 xaxis_tickangle=-17,
