@@ -94,6 +94,7 @@ index_layout = html.Div(
                 }
             ),
             html.Div(children='NOTE: ALL DATA HERE IS COMPLETELY RANDOMIZED EACH TIME UPON LOADING OF THIS DASHBOARD', style={'textAlign': 'center'}),
+            html.Div(children='There is no sensitive information present.', style={'textAlign': 'center'}),
             html.Br(),
             html.Div(children='Please feel free to contact me with any comments or questions via email: joegriff19@gmail.com', style={'textAlign': 'center'}),
             html.Br(),
