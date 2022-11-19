@@ -30,7 +30,7 @@ layout = html.Div(
                 id='dropdown4',
                 options=[{'label': 'Bar', 'value': 'Bar'},
                          {'label': 'Table', 'value': 'Table'}],
-                value='bar',
+                value='Bar',
             ),
         ],
             style={'width': '30%', "display": "block", "margin-left": "auto", "margin-right": "auto"}
