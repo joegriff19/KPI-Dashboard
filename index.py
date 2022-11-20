@@ -98,7 +98,6 @@ index_layout = html.Div(
             html.Br(),
             html.Div(children='Please feel free to contact me with any comments or questions via email: joegriff19@gmail.com', style={'textAlign': 'center'}),
             html.Br(),
-            html.Br(),
             html.Div(children='Hello! This is the Member Insights Dashboard.', style={'textAlign': 'center'}),
             html.Br(),
             html.Div(children='The content of this dashboard comes mainly from the following tables: ______', style={'textAlign': 'center'}),
